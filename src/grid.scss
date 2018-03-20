@@ -1,0 +1,226 @@
+// Change $max-cols if a grid of 12 doesn't work for you.
+$max-cols: 12;
+// Change $gutter to adjust the spacing between columns. Used with the .col-gutter* classes.
+$gutter: 1.5rem;
+
+// These queries and names work for me but might not work for you. Update the key with the
+// name to be used as the breakpoint identifier (.col-tab-12) and the value is the query.
+$queries: (
+  all: "(min-width: 0px)", // This one isn't used as an identifier. It's identifer is mearly .col
+  pho: "(min-width: 414px)", // pho = phones
+  phb: "(min-width: 600px)", // phb = phablets
+  tab: "(min-width: 1024px)", // tab = tablets
+  lap: "(min-width: 1366px)", // lap = laptops
+  des: "(min-width: 1920px)" // des = desktops
+);
+
+// Every col is a block with border-box.
+@mixin col {
+  display: block;
+  box-sizing: border-box;
+}
+
+// Flex definition includes older versions for old browsers.
+@mixin flex {
+  box-sizing: border-box;
+  // Old syntax
+  display: box;
+  // IE10 syntax
+  display: flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+@mixin vertical-flex {
+  // Old syntax
+  display: box;
+  // IE10 syntax
+  display: flexbox;
+  display: flex;
+  flex-direction: column;
+}
+
+@function col-width($col, $col-count) {
+  @return calc(#{$col} / #{$col-count} * 100%);
+}
+
+@mixin colUtils($name, $col-count, $query-id) {
+  @for $i from 1 through $col-count {
+    .#{$name}-#{$i} {
+      @include col;
+      width: col-width($i, $col-count);
+    }
+
+    .#{$name}-order-#{$i} {
+      order: $i;
+    }
+
+    @if $query-id {
+      .push-#{$query-id}-#{$i} {
+        margin-left: col-width($i, $col-count);
+      }
+
+      .pull-#{$query-id}-#{$i} {
+        margin-left: col-width(-$i, $col-count);
+      }
+    } @else {
+      .push-#{$i} {
+        margin-left: col-width($i, $col-count);
+      }
+
+      .pull-#{$i} {
+        margin-left: col-width(-$i, $col-count);
+      }
+    }
+  }
+}
+
+@mixin gridUtils() {
+  .grid {
+    @include flex;
+  }
+
+  .vertical-grid,
+  .center-vertically {
+    @include vertical-flex;
+  }
+}
+
+@mixin helperUtils($name, $gutter-width, $query-id) {
+  // Only media queries need the push-<size>-none class
+  @if $query-id {
+    .push-#{$query-id}-none {
+      margin-left: 0;
+    }
+  
+    .pull-#{$query-id}-none {
+      margin-left: 0;
+    }
+  }
+
+  // Places a column on its own row yet maintains its width.
+  .#{$name}-own-row {
+    flex-basis: 100%;
+  }
+
+  // Resets a column's order
+  .#{$name}-order-none {
+    order: initial;
+  }
+
+  // IE doesn't accept initial or unset for order, so this is here to help reset the order.
+  .#{$name}-order-0 {
+    order: 0;
+  }
+
+  // A helper class that uses vertical grid and sets the content to be vertically centered.
+  .center-vertically {
+    justify-content: center;
+  }
+
+  // For columns that are not the first or last, use half the gutter width to equal one full gutter on the left and right.
+  .#{$name}-gutter {
+    padding-left: $gutter-width / 2;
+    padding-right: $gutter-width / 2;
+  }
+
+  // For the first column, use one full gutter width for the left and half on the right.
+  .#{$name}-gutter-first {
+    padding-left: $gutter-width;
+    padding-right: $gutter-width / 2;
+  }
+
+  // For the last column, use one full gutter width for the right and half on the left.
+  .#{$name}-gutter-last {
+    padding-left: $gutter-width / 2;
+    padding-right: $gutter-width;
+  }
+
+  // For onely one column, set the left and right to a full gutter width.
+  .#{$name}-gutter-only {
+    padding-right: $gutter-width;
+    padding-left: $gutter-width;
+  }
+
+  // Removes gutter on the left and right.
+  .#{$name}-gutter-none {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  // Justify align columns.
+  .#{$name}-justify {
+    @include flex;
+    justify-content: space-around;
+  }
+
+  // Right align columns.
+  .#{$name}-right-aligned {
+    @include flex;
+    justify-content: flex-end;
+  }
+
+  // Left align columns.
+  .#{$name}-left-aligned {
+    @include flex;
+    justify-content: flex-start;
+  }
+
+  // Center align columns.
+  .#{$name}-center-aligned {
+    @include flex;
+    justify-content: center;
+  }
+
+  // Text align right a column
+  .#{$name}-text-align-right {
+    text-align: right;
+  }
+
+  // Text align left a column
+  .#{$name}-text-align-left {
+    text-align: left;
+  }
+
+  // Text align center a column
+  .#{$name}-text-align-center {
+    text-align: center;
+  }
+
+  // For an unlimited amount of columns.
+  .#{$name}-any {
+    flex: 1;
+  }
+
+  // Removes flex and resets the width.
+  .#{$name}-none {
+    flex: none;
+    width: auto;
+  }
+
+  // Sets the column to display none.
+  .#{$name}-display-none {
+    display: none;
+  }
+}
+
+@each $size, $query in $queries {
+  $name: col;
+
+  // Don't wrap the first in a media query so we are mobile first.
+  @if index($queries, ($size $query)) == 1 {
+    @include colUtils($name, $max-cols, false);
+    @include gridUtils();
+    @include helperUtils($name, $gutter, false);
+  } @else {
+    $name: col- + $size;
+    
+    // Output everything in a media query.
+    @media #{$query} {
+      @include colUtils($name, $max-cols, $size);
+      @include gridUtils();
+      @include helperUtils($name, $gutter, $size);
+    }
+  }
+}
