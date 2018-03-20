@@ -32,7 +32,7 @@ For example
 
 Breakdown of the above example
 1. Between 0px and 413px all anchors will be stacked.
-2. At 414px and greater the anchors will be 1/3 the width and justify aligned. The first will be text aligned left and the last will be aligned right.
+2. At 414px and greater the anchors will be 1/4 the width and justify aligned. The first will be text aligned left and the last will be aligned right.
 
 ## So why another CSS grid system?
 
