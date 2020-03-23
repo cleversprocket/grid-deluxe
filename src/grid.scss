@@ -20,23 +20,14 @@ $queries: (
   box-sizing: border-box;
 }
 
-// Flex definition includes older versions for old browsers.
 @mixin flex {
   box-sizing: border-box;
-  // Old syntax
-  display: box;
-  // IE10 syntax
-  display: flexbox;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
 }
 
 @mixin vertical-flex {
-  // Old syntax
-  display: box;
-  // IE10 syntax
-  display: flexbox;
   display: flex;
   flex-direction: column;
 }

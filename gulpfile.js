@@ -20,7 +20,7 @@ gulp.task('default', ["clean"], function () {
     .pipe(gulp.dest(destPath))
     .pipe(postcss([autoprefixer({
       browsers: [
-        "ie >= 10",
+        "ie >= 11",
         "safari >= 6.1"
       ]
     })]))
