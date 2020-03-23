@@ -216,8 +216,6 @@
 
 .grid {
   box-sizing: border-box;
-  display: box;
-  display: flexbox;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -225,8 +223,6 @@
 
 .vertical-grid,
 .center-vertically {
-  display: box;
-  display: flexbox;
   display: flex;
   flex-direction: column;
 }
@@ -274,8 +270,6 @@
 
 .col-justify {
   box-sizing: border-box;
-  display: box;
-  display: flexbox;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -284,8 +278,6 @@
 
 .col-right-aligned {
   box-sizing: border-box;
-  display: box;
-  display: flexbox;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -294,8 +286,6 @@
 
 .col-left-aligned {
   box-sizing: border-box;
-  display: box;
-  display: flexbox;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -304,8 +294,6 @@
 
 .col-center-aligned {
   box-sizing: border-box;
-  display: box;
-  display: flexbox;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -508,16 +496,12 @@
   }
   .grid {
     box-sizing: border-box;
-    display: box;
-    display: flexbox;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
   }
   .vertical-grid,
   .center-vertically {
-    display: box;
-    display: flexbox;
     display: flex;
     flex-direction: column;
   }
@@ -561,8 +545,6 @@
   }
   .col-pho-justify {
     box-sizing: border-box;
-    display: box;
-    display: flexbox;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -570,8 +552,6 @@
   }
   .col-pho-right-aligned {
     box-sizing: border-box;
-    display: box;
-    display: flexbox;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -579,8 +559,6 @@
   }
   .col-pho-left-aligned {
     box-sizing: border-box;
-    display: box;
-    display: flexbox;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -588,8 +566,6 @@
   }
   .col-pho-center-aligned {
     box-sizing: border-box;
-    display: box;
-    display: flexbox;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -787,16 +763,12 @@
   }
   .grid {
     box-sizing: border-box;
-    display: box;
-    display: flexbox;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
   }
   .vertical-grid,
   .center-vertically {
-    display: box;
-    display: flexbox;
     display: flex;
     flex-direction: column;
   }
@@ -840,8 +812,6 @@
   }
   .col-phb-justify {
     box-sizing: border-box;
-    display: box;
-    display: flexbox;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -849,8 +819,6 @@
   }
   .col-phb-right-aligned {
     box-sizing: border-box;
-    display: box;
-    display: flexbox;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -858,8 +826,6 @@
   }
   .col-phb-left-aligned {
     box-sizing: border-box;
-    display: box;
-    display: flexbox;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -867,8 +833,6 @@
   }
   .col-phb-center-aligned {
     box-sizing: border-box;
-    display: box;
-    display: flexbox;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -1066,16 +1030,12 @@
   }
   .grid {
     box-sizing: border-box;
-    display: box;
-    display: flexbox;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
   }
   .vertical-grid,
   .center-vertically {
-    display: box;
-    display: flexbox;
     display: flex;
     flex-direction: column;
   }
@@ -1119,8 +1079,6 @@
   }
   .col-tab-justify {
     box-sizing: border-box;
-    display: box;
-    display: flexbox;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -1128,8 +1086,6 @@
   }
   .col-tab-right-aligned {
     box-sizing: border-box;
-    display: box;
-    display: flexbox;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -1137,8 +1093,6 @@
   }
   .col-tab-left-aligned {
     box-sizing: border-box;
-    display: box;
-    display: flexbox;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -1146,8 +1100,6 @@
   }
   .col-tab-center-aligned {
     box-sizing: border-box;
-    display: box;
-    display: flexbox;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -1345,16 +1297,12 @@
   }
   .grid {
     box-sizing: border-box;
-    display: box;
-    display: flexbox;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
   }
   .vertical-grid,
   .center-vertically {
-    display: box;
-    display: flexbox;
     display: flex;
     flex-direction: column;
   }
@@ -1398,8 +1346,6 @@
   }
   .col-lap-justify {
     box-sizing: border-box;
-    display: box;
-    display: flexbox;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -1407,8 +1353,6 @@
   }
   .col-lap-right-aligned {
     box-sizing: border-box;
-    display: box;
-    display: flexbox;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -1416,8 +1360,6 @@
   }
   .col-lap-left-aligned {
     box-sizing: border-box;
-    display: box;
-    display: flexbox;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -1425,8 +1367,6 @@
   }
   .col-lap-center-aligned {
     box-sizing: border-box;
-    display: box;
-    display: flexbox;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -1624,16 +1564,12 @@
   }
   .grid {
     box-sizing: border-box;
-    display: box;
-    display: flexbox;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
   }
   .vertical-grid,
   .center-vertically {
-    display: box;
-    display: flexbox;
     display: flex;
     flex-direction: column;
   }
@@ -1677,8 +1613,6 @@
   }
   .col-des-justify {
     box-sizing: border-box;
-    display: box;
-    display: flexbox;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -1686,8 +1620,6 @@
   }
   .col-des-right-aligned {
     box-sizing: border-box;
-    display: box;
-    display: flexbox;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -1695,8 +1627,6 @@
   }
   .col-des-left-aligned {
     box-sizing: border-box;
-    display: box;
-    display: flexbox;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -1704,8 +1634,6 @@
   }
   .col-des-center-aligned {
     box-sizing: border-box;
-    display: box;
-    display: flexbox;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
