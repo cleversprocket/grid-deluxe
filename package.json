@@ -1,12 +1,13 @@
 {
   "name": "grid-deluxe",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "A CSS flex grid with more than just columns and rows.",
   "repository": {
     "type": "git",
     "url": "git@github.com:cleversprocket/grid-deluxe.git"
   },
   "scripts": {
+    "prepublish": "npm run build",
     "build": "gulp",
     "clean": "gulp clean",
     "test": "echo \"Error: no test specified\" && exit 1"
