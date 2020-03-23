@@ -1,7 +1,8 @@
 {
   "name": "grid-deluxe",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A CSS flex grid with more than just columns and rows.",
+  "main": "dist",
   "repository": {
     "type": "git",
     "url": "git@github.com:cleversprocket/grid-deluxe.git"
